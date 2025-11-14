@@ -15,6 +15,7 @@ pub fn build(b: *std.Build) void {
             .root_source_file = b.path("src/kernel.zig"),
         }),
     });
+    exe.addObjectFile(b.path("src/boot.S"));
     exe.setLinkerScript(b.path("linker.ld"));
     b.installArtifact(exe);
 }

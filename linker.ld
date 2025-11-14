@@ -5,16 +5,20 @@ SECTIONS
     . = 0x40000000;
 
     .text : {
-        *(.text .text.*)
-        *(.rodata .rodata.*)
+        *(.text)
+        *(.text.*)
+        *(.rodata)
+        *(.rodata.*)
     }
 
     .data : {
-        *(.data .data.*)
+        *(.data)
+        *(.data.*)
     }
 
     .bss : {
-        *(.bss .bss.*)
+        *(.bss)
+        *(.bss.*)
         *(COMMON)
     }
 }

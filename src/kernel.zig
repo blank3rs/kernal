@@ -7,7 +7,7 @@ fn print(msg: []const u8) void {
         putc(c);
     }
 }
-pub export fn _start() noreturn {
+pub export fn kernel_main() noreturn {
     print("Kernel starting...\n");
     while (true) {}
 }
