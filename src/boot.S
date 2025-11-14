@@ -1,10 +1,6 @@
 .section .text
 .global _start
 
-.align 12
-TTBR0_TABLE:
-    .zero 4096
-
 _start:
     ldr x0, =0x41000000
     mov sp, x0
@@ -39,3 +35,7 @@ _start:
     bl kernel_main
 
 1:  b 1b
+
+.align 12
+TTBR0_TABLE:
+    .zero 4096
